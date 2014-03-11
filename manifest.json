@@ -1,0 +1,41 @@
+{
+  "name": "Subsonic",
+  "id": "subsonic",
+  "description": {
+    "en": "Web-based media streaming",
+    "fr": "Diffuion audio-vidéo en mode web "
+  },
+  "developer": {
+    "name": "lunarok",
+    "email": "cedric@wayang.fr",
+    "url": "http://www.wayang.fr"
+  },
+  "multi_instance": "false",
+  "arguments": {
+    "install": [
+      {
+        "name": "domain",
+        "ask": {
+          "en": "Choose a domain for Subsonic"
+        },
+        "example": "domain.org"
+      },
+      {
+        "name": "path",
+        "ask": {
+          "en": "Choose a path for Subsonic"
+        },
+        "example": "/subsonic",
+        "default": "/subsonic"
+      },
+      {
+        "name": "server",
+        "ask": {
+          "en": "Choose IP where Subsonic is installed"
+        },
+        "example": "127.0.0.1",
+        "default": "127.0.0.1"
+      }
+    ]
+  }
+}
