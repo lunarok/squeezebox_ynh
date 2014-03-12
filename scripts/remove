@@ -1,8 +1,8 @@
 #!/bin/bash
 
-domain=$(sudo yunohost app setting subsonic domain)
+domain=$(sudo yunohost app setting squeezebox domain)
 
-sudo rm /etc/nginx/conf.d/$domain.d/subsonic.conf
+sudo rm /etc/nginx/conf.d/$domain.d/squeezebox.conf
 
 sudo service nginx reload
 sudo yunohost app ssowatconf 
