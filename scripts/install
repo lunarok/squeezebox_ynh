@@ -5,7 +5,7 @@ domain=$1
 path=$2
 ip=$3
 
-sudo yunohost app checkurl $domain$path -a subsonic
+sudo yunohost app checkurl $domain$path -a squeezebox
 if [[ ! $? -eq 0 ]]; then
   exit 1
 fi
@@ -16,6 +16,6 @@ path=${path%/}
 # Configure Nginx and reload
 sed -i "s@PATHTOCHANGE@$path@g" ../conf/nginx.conf
 sed -i "s@IPTOCHANGE@$ip@g" ../conf/nginx.conf
-sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/subsonic.conf
+sudo cp ../conf/nginx.conf /etc/nginx/conf.d/$domain.d/squeezebox.conf
 sudo service nginx reload
 echo $?
